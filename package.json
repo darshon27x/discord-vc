@@ -1,0 +1,12 @@
+{
+  "name": "discord-selfbot-panel",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": { "start": "node app.js" },
+  "dependencies": {
+    "express": "^4.18.2",
+    "discord.js-selfbot-youtsuho-v13": "latest",
+    "@discordjs/voice": "^0.16.0",
+    "dotenv": "^16.3.1"
+  }
+}

@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    background: radial-gradient(circle at top right, #111422 0%, #07090e 100%); 
+    color: #f3f4f6; 
+    font-family: 'Outfit', sans-serif; 
+    min-height: 100vh;
+    padding: 2rem; 
+}
+
+.container { 
+    max-width: 1400px; 
+    margin: auto; 
+}
+
+
+header {
+    margin-bottom: 2rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+header h1 { 
+    font-size: 2.2rem; 
+    font-weight: 700;
+    background: linear-gradient(135deg, #d8b4fe, #818cf8, #60a5fa); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
+}
+
+header p {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.35rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 1.5rem;
+    color: #9ca3af;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.nav-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-btn.active {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+}
+
+
+.user-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.user-welcome {
+    font-size: 0.9rem;
+    color: #e5e7eb;
+}
+
+.user-welcome strong {
+    color: #818cf8;
+}
+
+.logout-btn {
+    background: linear-gradient(135deg, #f43f5e, #be123c);
+    border: none;
+    padding: 0.35rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 0.8rem;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+}
+
+
+.view-section {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.add-section, .accounts-section { 
+    background: rgba(17, 20, 31, 0.7); 
+    border-radius: 1.25rem; 
+    padding: 2rem; 
+    margin-bottom: 2rem; 
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(8px);
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.input-group { 
+    display: flex; 
+    gap: 1rem; 
+    margin-top: 1rem; 
+}
+
+input { 
+    background: #090b10; 
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    padding: 0.8rem 1.2rem; 
+    border-radius: 0.75rem; 
+    color: white; 
+    font-family: inherit;
+    font-size: 0.95rem;
+    flex: 1; 
+    transition: all 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
+}
+
+button { 
+    background: linear-gradient(135deg, #6366f1, #8b5cf6); 
+    border: none; 
+    padding: 0.8rem 2rem; 
+    border-radius: 0.75rem; 
+    color: white; 
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer; 
+    transition: all 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+.accounts-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); 
+    gap: 1.5rem; 
+    margin-top: 1rem; 
+}
+
+.account-card { 
+    background: rgba(26, 30, 42, 0.6); 
+    border-radius: 1.25rem; 
+    padding: 1.5rem; 
+    border: 1px solid rgba(255, 255, 255, 0.06); 
+    transition: all 0.3s;
+}
+
+.account-card:hover {
+    border-color: rgba(129, 140, 248, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 1.2rem; 
+}
+
+.username { 
+    font-weight: 600; 
+    color: #c084fc; 
+    font-size: 1.15rem;
+}
+
+.status { 
+    font-size: 0.75rem; 
+    font-weight: 600;
+    padding: 0.25rem 0.75rem; 
+    border-radius: 20px; 
+    text-transform: uppercase;
+}
+
+.status.online { 
+    background: rgba(16, 185, 129, 0.15); 
+    color: #10b981; 
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status.offline {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.delete-btn { 
+    background: rgba(239, 68, 68, 0.1); 
+    padding: 0.35rem 0.6rem; 
+    border-radius: 0.5rem;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    font-size: 0.8rem; 
+    margin-left: 0.5rem; 
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.delete-btn:hover {
+    background: #ef4444;
+    border-color: #ef4444;
+}
+
+.section-title { 
+    font-size: 0.75rem; 
+    font-weight: 600;
+    text-transform: uppercase; 
+    letter-spacing: 0.05em;
+    color: #9ca3af; 
+    margin: 1.2rem 0 0.5rem; 
+}
+
+.voice-controls, .send-message { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0.6rem; 
+    margin: 0.6rem 0; 
+}
+
+.voice-controls input, .send-message input { 
+    flex: 1; 
+    padding: 0.5rem 0.8rem; 
+    font-size: 0.85rem;
+}
+
+.small-btn { 
+    background: rgba(255, 255, 255, 0.05); 
+    padding: 0.5rem 1rem; 
+    border-radius: 0.5rem; 
+    font-size: 0.8rem; 
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+    color: white; 
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer; 
+    transition: all 0.2s;
+}
+
+.small-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.small-btn.primary { 
+    background: #4f46e5; 
+    border-color: #6366f1;
+}
+
+.small-btn.primary:hover {
+    background: #6366f1;
+}
+
+
+.auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(4, 5, 9, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.auth-card {
+    background: rgba(17, 20, 31, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    width: 100%;
+    max-width: 460px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.auth-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.brand-icon {
+    font-size: 2.5rem;
+}
+
+.auth-card h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.auth-subtitle {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.auth-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.input-container label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.auth-submit-btn {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.loading {
+    color: #9ca3af;
+    padding: 2rem;
+    text-align: center;
+    font-style: italic;
+}
+
+
+.admin-dashboard-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.admin-create-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.admin-create-form button {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.admin-table th {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #9ca3af;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admin-table td {
+    padding: 1rem;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    vertical-align: middle;
+}
+
+.admin-table tr:hover td {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.role-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.role-badge.admin {
+    background: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.role-badge.user {
+    background: rgba(96, 165, 250, 0.15);
+    color: #60a5fa;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+
+.limit-edit-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.limit-edit-group input {
+    width: 70px;
+    padding: 0.4rem;
+    font-size: 0.85rem;
+    text-align: center;
+    flex: none;
+}
+
+.save-limit-btn {
+    background: #10b981;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.save-limit-btn:hover {
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+@media (max-width: 1024px) {
+    .admin-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:600px){ 
+    body { padding: 1rem; } 
+    .voice-controls, .send-message { flex-direction: column; } 
+    .auth-card { padding: 2rem 1.5rem; }
+    .header-main { flex-direction: column; align-items: flex-start; }
+    .user-header { width: 100%; justify-content: space-between; }
+    .nav-links { width: 100%; order: 3; justify-content: center; }
+}
