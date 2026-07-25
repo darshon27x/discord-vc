@@ -36,8 +36,8 @@ Make sure you have [Node.js](https://nodejs.org/) (v16 or higher) installed on y
 
 ### 2. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-cd YOUR_REPOSITORY_NAME
+git clone https://github.com/darshon27x/discord-vc.git
+cd discord-vc
 ```
 
 ### 3. Install Dependencies
@@ -80,7 +80,7 @@ If you are setting up this project on GitHub for the first time, follow these st
 4. **Set Main Branch & Link Remote Repository:**
    ```bash
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+   git remote add origin https://github.com/darshon27x/discord-vc.git
    ```
 
 5. **Push to GitHub:**
